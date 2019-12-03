@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import './App.css';
 import Person from './Person/Person';
 
@@ -42,10 +43,14 @@ class App extends Component {
       backgroundColor: 'green',
       color: 'white',
       font: 'inherit',
-      border: '4px solid green',
+      border: '2px solid darkgreen',
       padding: '8px',
-      cursor: 'pointer'
-    }
+      cursor: 'pointer',
+      ':hover': {
+        backgroundColor: 'lightblue',
+        color: 'black'
+      }
+    };
 
     let persons = null;
 
@@ -63,7 +68,13 @@ class App extends Component {
         </div>
       );
 
-      style.backgroundColor = 'blue';
+      style.backgroundColor = 'lightgreen';
+      style.color = 'darkgreen';
+      style[':hover'] = {
+        border: '2px solid black',
+        backgroundColor: 'lightblue',
+        color: 'black'
+      }
     }
 
     const classes = [];
@@ -88,4 +99,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default (App);
