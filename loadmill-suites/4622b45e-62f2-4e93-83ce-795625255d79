@@ -22,7 +22,7 @@
         "concurrency": 1,
         "requests": [
           {
-            "url": "wwww",
+            "url": "wwwwaaa",
             "method": "GET",
             "headers": [],
             "assert": [],
