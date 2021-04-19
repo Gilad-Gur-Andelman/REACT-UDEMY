@@ -22,7 +22,7 @@
         "concurrency": 1,
         "requests": [
           {
-            "url": "lalalalalalala",
+            "url": "toto",
             "method": "GET",
             "headers": [],
             "assert": [],
