@@ -22,13 +22,17 @@
         "concurrency": 1,
         "requests": [
           {
-            "url": "wwww",
+            "url": "toto",
             "method": "GET",
             "headers": [],
             "assert": [],
             "extract": [],
             "timeout": 60000,
-            "expectedStatus": "SUCCESS"
+            "expectedStatus": "SUCCESS",
+            "postData": {
+              "text": "",
+              "mimeType": "arnon"
+            }
           }
         ],
         "meta": {
