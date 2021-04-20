@@ -715,6 +715,69 @@
         ]
       },
       "runInCi": false
+    },
+    {
+      "order": 2,
+      "conf": {
+        "duration": 60000,
+        "concurrency": 5,
+        "requests": [
+          {
+            "url": "asdsad3333",
+            "method": "GET",
+            "headers": [],
+            "assert": [],
+            "extract": [],
+            "timeout": 60000,
+            "expectedStatus": "SUCCESS"
+          }
+        ],
+        "meta": {
+          "description": "123sadsa"
+        },
+        "parameterPools": [],
+        "targetedCountries": [],
+        "iterationDelay": 1000,
+        "cachePenetration": {},
+        "rampUp": 60000,
+        "skipLoginFlow": false,
+        "parameters": [
+          {
+            "origin_1": "https://loadmill-test-blog.herokuapp.com"
+          },
+          {
+            "p4_request_body_username": "a@b.com"
+          },
+          {
+            "p4_request_body_password": "Test1234"
+          },
+          {
+            "p5_request_url_query_type": "blog,theme,private"
+          },
+          {
+            "p6_request_url_query_status": "all"
+          },
+          {
+            "p6_request_url_query_include": "roles"
+          },
+          {
+            "p7_request_url_query_include": "tags"
+          },
+          {
+            "p10_request_url_query_limit": "all"
+          },
+          {
+            "p13_request_body_posts_0_title": "test"
+          },
+          {
+            "p13_request_body_posts_0_status": "draft"
+          },
+          {
+            "p15_request_body_posts_0_markdown": "test123"
+          }
+        ]
+      },
+      "runInCi": false
     }
   ]
 }
