@@ -1,0 +1,43 @@
+{
+  "conf": {
+    "meta": {
+      "description": "New Test Suite - Apr 20"
+    },
+    "useCookies": true,
+    "loginFlow": [],
+    "authenticationHeaders": [],
+    "sharedLoginFlowDescription": "New Flow",
+    "parameters": []
+  },
+  "flows": [
+    {
+      "order": 0,
+      "conf": {
+        "duration": 60000,
+        "concurrency": 5,
+        "requests": [
+          {
+            "url": "test.com",
+            "method": "GET",
+            "headers": [],
+            "assert": [],
+            "extract": [],
+            "timeout": 60000,
+            "expectedStatus": "SUCCESS"
+          }
+        ],
+        "meta": {
+          "description": "New Flow"
+        },
+        "parameterPools": [],
+        "targetedCountries": [],
+        "iterationDelay": 1000,
+        "cachePenetration": {},
+        "rampUp": 60000,
+        "skipLoginFlow": false,
+        "parameters": []
+      },
+      "runInCi": false
+    }
+  ]
+}
