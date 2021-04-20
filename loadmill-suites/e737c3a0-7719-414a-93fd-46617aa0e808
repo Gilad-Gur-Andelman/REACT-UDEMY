@@ -52,7 +52,7 @@
         "concurrency": 5,
         "requests": [
           {
-            "url": "aaabbb",
+            "url": "aaabbbc",
             "method": "GET",
             "headers": [],
             "assert": [],
