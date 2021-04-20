@@ -1,7 +1,7 @@
 {
   "conf": {
     "meta": {
-      "description": "sync this 💩"
+      "description": "sync this 💩hehe poop"
     },
     "loginFlow": [],
     "useCookies": true,
@@ -18,7 +18,7 @@
         "concurrency": 5,
         "requests": [
           {
-            "url": "aaa",
+            "url": "aaabbb",
             "method": "GET",
             "headers": [],
             "assert": [],
