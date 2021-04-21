@@ -1,0 +1,81 @@
+{
+  "conf": {
+    "meta": {
+      "description": "pluck"
+    },
+    "loginFlow": [],
+    "useCookies": true,
+    "parameters": [
+      {
+        "host": [
+          "https://www.yochai.com",
+          "https://www.arnon.com"
+        ]
+      }
+    ],
+    "authenticationHeaders": [],
+    "parametersScope": "FLOW",
+    "sharedLoginFlowDescription": "New Load Test - Apr 19"
+  },
+  "flows": [
+    {
+      "order": 0,
+      "conf": {
+        "duration": 60000,
+        "concurrency": 5,
+        "requests": [
+          {
+            "url": "httpbin.org/json",
+            "method": "GET",
+            "headers": [],
+            "assert": [],
+            "extract": [
+              {
+                "arr": {
+                  "jsonPath": "$.slideshow.slides"
+                }
+              },
+              {
+                "nullish": {
+                  "jsonPath": "$.null"
+                }
+              },
+              {
+                "newArr": "${__array_pluck(arr,nullish,nullish,'title:arnon')}"
+              }
+            ],
+            "timeout": 60000,
+            "expectedStatus": "SUCCESS"
+          },
+          {
+            "url": "${host}",
+            "method": "GET",
+            "headers": [],
+            "assert": [],
+            "extract": [],
+            "timeout": 60000,
+            "expectedStatus": "SUCCESS"
+          }
+        ],
+        "meta": {
+          "description": "New Flow"
+        },
+        "parameterPools": [],
+        "targetedCountries": [],
+        "iterationDelay": 1000,
+        "cachePenetration": {},
+        "rampUp": 60000,
+        "skipLoginFlow": false,
+        "parameters": [
+          {
+            "host": [
+              "https://www.yochai.com",
+              "https://www.arnon.com"
+            ]
+          }
+        ]
+      },
+      "runInCi": false
+    }
+  ]
+}
